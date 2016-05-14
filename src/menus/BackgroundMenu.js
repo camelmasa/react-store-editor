@@ -23,6 +23,6 @@ export default class BackgroundMenu extends React.Component {
       )
     })
 
-    return (<div className="menu-content">{thumbs}</div>)
+    return (<div className="menu-content">{thumbs}/* Background pattern from subtlepatterns.com */</div>)
   }
 }
