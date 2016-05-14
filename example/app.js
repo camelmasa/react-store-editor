@@ -19,14 +19,14 @@ ReactDOM.render(
       sidebarStyle={ { sidebar: { overflowY: "hidden" }, overlay: { backgroundColor: "" } } }
       previewClassName={"preview"}
       products={ [
-        { image: "/images/men_t_shirts.jpg", name: "Men T Shirts", price: "$20.00"},
-        { image: "/images/ladies_t_shirts.jpg", name: "Ladies T Shirts", price: "$20.00"},
-        { image: "/images/button_badges.jpg", name: "Button badges", price: "$4.00"},
-        { image: "/images/mug.jpg", name: "Mug", price: "$19.00"},
-        { image: "/images/seals.jpg", name: "Seals", price: "$5.00"},
-        { image: "/images/tracker_hat.jpg", name: "Tracker hat", price: "$17.75"},
-        { image: "/images/post_cards.jpg", name: "Post cards", price: "$1.00"},
-        { image: "/images/iphone.jpg", name: "iPhone 6/6s, Tough", price: "$53.25"}
+        { image: "./images/men_t_shirts.jpg", name: "Men T Shirts", price: "$20.00"},
+        { image: "./images/ladies_t_shirts.jpg", name: "Ladies T Shirts", price: "$20.00"},
+        { image: "./images/button_badges.jpg", name: "Button badges", price: "$4.00"},
+        { image: "./images/mug.jpg", name: "Mug", price: "$19.00"},
+        { image: "./images/seals.jpg", name: "Seals", price: "$5.00"},
+        { image: "./images/tracker_hat.jpg", name: "Tracker hat", price: "$17.75"},
+        { image: "./images/post_cards.jpg", name: "Post cards", price: "$1.00"},
+        { image: "./images/iphone.jpg", name: "iPhone 6/6s, Tough", price: "$53.25"}
       ]}
   />,
   document.getElementById('app')

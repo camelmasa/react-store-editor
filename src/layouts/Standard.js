@@ -8,7 +8,7 @@ export default class Standard extends React.Component {
   }
 
   static icon () {
-    return <img src="/images/line.png" />
+    return <img src="./images/line.png" />
   }
 
   static style() {
