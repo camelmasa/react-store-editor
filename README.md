@@ -47,3 +47,9 @@ ReactDOM.render(
 ## License
 
 MIT
+
+This project is using [React logo ](https://github.com/facebook/react/blob/master/docs/img/logo.svg) for example products images.
+See [license](https://github.com/facebook/react/blob/master/LICENSE-docs) for reference. (creative commons license)
+
+Also, this project is using [Subtle Patterns](http://subtlepatterns.com/) for background images.
+See [Frequently Asked Questions](http://subtlepatterns.com/about/) for reference.
