@@ -20191,19 +20191,19 @@
 
 	var _Menu2 = _interopRequireDefault(_Menu);
 
-	var _MenuButton = __webpack_require__(257);
+	var _MenuButton = __webpack_require__(259);
 
 	var _MenuButton2 = _interopRequireDefault(_MenuButton);
 
-	var _Preview = __webpack_require__(258);
+	var _Preview = __webpack_require__(260);
 
 	var _Preview2 = _interopRequireDefault(_Preview);
 
-	var _Standard = __webpack_require__(262);
+	var _Standard = __webpack_require__(264);
 
 	var _Standard2 = _interopRequireDefault(_Standard);
 
-	var _Panel = __webpack_require__(263);
+	var _Panel = __webpack_require__(265);
 
 	var _Panel2 = _interopRequireDefault(_Panel);
 
@@ -20215,7 +20215,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	__webpack_require__(264);
+	__webpack_require__(266);
 
 	var StoreEditor = function (_React$Component) {
 	  _inherits(StoreEditor, _React$Component);
@@ -20781,7 +20781,7 @@
 
 	var _LogoMenu2 = _interopRequireDefault(_LogoMenu);
 
-	var _BackgroundMenu = __webpack_require__(255);
+	var _BackgroundMenu = __webpack_require__(257);
 
 	var _BackgroundMenu2 = _interopRequireDefault(_BackgroundMenu);
 
@@ -22410,7 +22410,7 @@
 	              _react2.default.createElement(
 	                'a',
 	                { className: 'item', onClick: this.changeLogoFont, 'data-font': 'Amatic SC' },
-	                _react2.default.createElement('img', { src: './images/amatic+sc.png' })
+	                _react2.default.createElement('img', { src: __webpack_require__(255) })
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -22419,7 +22419,7 @@
 	              _react2.default.createElement(
 	                'a',
 	                { className: 'item', onClick: this.changeLogoFont, 'data-font': 'Bad Script' },
-	                _react2.default.createElement('img', { src: './images/bad+script.png' })
+	                _react2.default.createElement('img', { src: __webpack_require__(256) })
 	              )
 	            )
 	          )
@@ -28867,6 +28867,18 @@
 /* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = __webpack_require__.p + "0fc72d1cc9a37f18270cc95e190ad530.png";
+
+/***/ },
+/* 256 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "e78dab4c185d41891ed524ab05d1852e.png";
+
+/***/ },
+/* 257 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -28879,7 +28891,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _thumbnails = __webpack_require__(256);
+	var _thumbnails = __webpack_require__(258);
 
 	var _thumbnails2 = _interopRequireDefault(_thumbnails);
 
@@ -28935,7 +28947,7 @@
 	exports.default = BackgroundMenu;
 
 /***/ },
-/* 256 */
+/* 258 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -29298,7 +29310,7 @@
 	];
 
 /***/ },
-/* 257 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29357,7 +29369,7 @@
 	exports.default = MenuButton;
 
 /***/ },
-/* 258 */
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29372,7 +29384,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactFrame = __webpack_require__(259);
+	var _reactFrame = __webpack_require__(261);
 
 	var _reactFrame2 = _interopRequireDefault(_reactFrame);
 
@@ -29415,21 +29427,21 @@
 	exports.default = Preview;
 
 /***/ },
-/* 259 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(260);
+	module.exports = __webpack_require__(262);
 
 
 /***/ },
-/* 260 */
+/* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var blacklist = __webpack_require__(261);
+	var blacklist = __webpack_require__(263);
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(33);
 
@@ -29513,7 +29525,7 @@
 
 
 /***/ },
-/* 261 */
+/* 263 */
 /***/ function(module, exports) {
 
 	module.exports = function blacklist (src) {
@@ -29538,7 +29550,7 @@
 
 
 /***/ },
-/* 262 */
+/* 264 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29628,7 +29640,7 @@
 	exports.default = Standard;
 
 /***/ },
-/* 263 */
+/* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29729,13 +29741,13 @@
 	exports.default = Panel;
 
 /***/ },
-/* 264 */
+/* 266 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(265);
+	var content = __webpack_require__(267);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(182)(content, {});
@@ -29755,7 +29767,7 @@
 	}
 
 /***/ },
-/* 265 */
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(175)();

@@ -34,12 +34,12 @@ export default class LogoMenu extends React.Component {
           <div>
             <div>
               <a className="item" onClick={this.changeLogoFont} data-font="Amatic SC">
-                <img src="./images/amatic+sc.png" />
+                <img src={require(`../images/amatic+sc.png`)} />
               </a>
             </div>
             <div>
               <a className="item" onClick={this.changeLogoFont} data-font="Bad Script">
-                <img src="./images/bad+script.png" />
+                <img src={require(`../images/bad+script.png`)} />
               </a>
            </div>
           </div>
