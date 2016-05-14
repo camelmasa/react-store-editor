@@ -1,4 +1,27 @@
 {
+  "name": "react-store-editor",
+  "version": "0.0.1",
+  "description": "React component for Store editor.",
+  "main": "src/StoreEditor.js",
+  "github-pages-deploy": {
+    "src": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camelmasa/react-store-editor.git"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "store",
+    "editor"
+  ],
+  "author": "Masahiro Saito",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/camelmasa/react-store-editor/issues"
+  },
+  "homepage": "https://github.com/camelmasa/react-store-editor",
   "devDependencies": {
     "babel-core": "^6.7.7",
     "babel-loader": "^6.2.4",
