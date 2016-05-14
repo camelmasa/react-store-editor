@@ -73,7 +73,7 @@
 	  sidebarShadow: true,
 	  sidebarStyle: { sidebar: { overflowY: "hidden" }, overlay: { backgroundColor: "" } },
 	  previewClassName: "preview",
-	  products: [{ image: "/images/men_t_shirts.jpg", name: "Men T Shirts", price: "$20.00" }, { image: "/images/ladies_t_shirts.jpg", name: "Ladies T Shirts", price: "$20.00" }, { image: "/images/button_badges.jpg", name: "Button badges", price: "$4.00" }, { image: "/images/mug.jpg", name: "Mug", price: "$19.00" }, { image: "/images/seals.jpg", name: "Seals", price: "$5.00" }, { image: "/images/tracker_hat.jpg", name: "Tracker hat", price: "$17.75" }, { image: "/images/post_cards.jpg", name: "Post cards", price: "$1.00" }, { image: "/images/iphone.jpg", name: "iPhone 6/6s, Tough", price: "$53.25" }]
+	  products: [{ image: "./images/men_t_shirts.jpg", name: "Men T Shirts", price: "$20.00" }, { image: "./images/ladies_t_shirts.jpg", name: "Ladies T Shirts", price: "$20.00" }, { image: "./images/button_badges.jpg", name: "Button badges", price: "$4.00" }, { image: "./images/mug.jpg", name: "Mug", price: "$19.00" }, { image: "./images/seals.jpg", name: "Seals", price: "$5.00" }, { image: "./images/tracker_hat.jpg", name: "Tracker hat", price: "$17.75" }, { image: "./images/post_cards.jpg", name: "Post cards", price: "$1.00" }, { image: "./images/iphone.jpg", name: "iPhone 6/6s, Tough", price: "$53.25" }]
 	}), document.getElementById('app'));
 
 /***/ },
@@ -22410,7 +22410,7 @@
 	              _react2.default.createElement(
 	                'a',
 	                { className: 'item', onClick: this.changeLogoFont, 'data-font': 'Amatic SC' },
-	                _react2.default.createElement('img', { src: '/images/amatic+sc.png' })
+	                _react2.default.createElement('img', { src: './images/amatic+sc.png' })
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -22419,7 +22419,7 @@
 	              _react2.default.createElement(
 	                'a',
 	                { className: 'item', onClick: this.changeLogoFont, 'data-font': 'Bad Script' },
-	                _react2.default.createElement('img', { src: '/images/bad+script.png' })
+	                _react2.default.createElement('img', { src: './images/bad+script.png' })
 	              )
 	            )
 	          )
@@ -28917,7 +28917,7 @@
 	        return _react2.default.createElement(
 	          'span',
 	          { onClick: _this2.changeBackground, 'data-background': thumbnail },
-	          _react2.default.createElement('img', { src: '/thumbnails/' + thumbnail + '.png' })
+	          _react2.default.createElement('img', { src: './thumbnails/' + thumbnail + '.png' })
 	        );
 	      });
 
@@ -29613,7 +29613,7 @@
 	  }], [{
 	    key: 'icon',
 	    value: function icon() {
-	      return _react2.default.createElement('img', { src: '/images/line.png' });
+	      return _react2.default.createElement('img', { src: './images/line.png' });
 	    }
 	  }, {
 	    key: 'style',
@@ -29714,7 +29714,7 @@
 	  }], [{
 	    key: 'icon',
 	    value: function icon() {
-	      return _react2.default.createElement('img', { src: '/images/panel.png' });
+	      return _react2.default.createElement('img', { src: './images/panel.png' });
 	    }
 	  }, {
 	    key: 'style',
