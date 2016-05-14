@@ -4,7 +4,7 @@ React component for Store editor.
 
 ## Demo
 
-[demo](http://camelmasa.com/react-store-editor/example)
+[demo](http://camelmasa.github.io/react-store-editor/example)
 
 ## Example
 
