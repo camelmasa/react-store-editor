@@ -1,7 +1,7 @@
 'use strict'
 
 import React from 'react'
-import thumbnails from './thumbnails.json'
+import thumbnails from '../data/thumbnails.json'
 
 export default class BackgroundMenu extends React.Component {
   constructor(props) {
