@@ -8,7 +8,7 @@ export default class Panel extends React.Component {
   }
 
   static icon () {
-    return <img src="./images/panel.png" />
+    return <img src={require(`../images/panel.png`)} />
   }
 
   static style() {
