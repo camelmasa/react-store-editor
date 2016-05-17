@@ -6,6 +6,12 @@
 
   .menu {
     font-size: 27px;
+
+    .save {
+      float: right;
+      margin: 8px 8px 0 0;
+      cursor: pointer;
+    }
   }
 
   .menu-button {
