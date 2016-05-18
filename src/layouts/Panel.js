@@ -26,6 +26,14 @@ export default class Panel extends React.Component {
         text-align: center;
       }
 
+      .menu {
+        margin-bottom: 20px;
+      }
+
+      .menu span {
+        margin-right: 10px;
+      }
+
       .product {
         margin-bottom: 20px;
         width: 100%;
@@ -88,9 +96,13 @@ export default class Panel extends React.Component {
       layout.push(<div>{productLayouts.slice(i * 4, i * 4 + 4)}</div>)
     }
 
+    let t = this.props.data.t
+    let menu = <div className="menu"><span>{t.home}</span><span>{t.about}</span><span>{t.category}</span></div>
+
     return (
       <div className="container" >
         <h1 className="logo">{this.props.data.name}</h1>
+        {menu}
         <div className="main">{layout}</div>
       </div>
     )

@@ -26,6 +26,14 @@ export default class Standard extends React.Component {
         text-align: center;
       }
 
+      .menu {
+        margin-bottom: 20px;
+      }
+
+      .menu span {
+        margin-right: 10px;
+      }
+
       .product {
         margin-bottom: 20px;
         width: 100%;
@@ -81,9 +89,13 @@ export default class Standard extends React.Component {
       )
     })
 
+    let t = this.props.data.t
+    let menu = <div className="menu"><span>{t.home}</span><span>{t.about}</span><span>{t.category}</span></div>
+
     return (
       <div className="container" >
         <h1 className="logo">{this.props.data.name}</h1>
+        {menu}
         <div className="main">{layout}</div>
       </div>
     )

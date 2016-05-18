@@ -18,6 +18,7 @@ export default class StoreEditor extends React.Component {
 
     this.state = {
       set:               this.set.bind(this),
+      locale:            this.props.locale || "en",
       name:              this.props.name,
       background:        this.props.background,
       cssPrefix:         this.props.cssPrefix,
@@ -32,6 +33,8 @@ export default class StoreEditor extends React.Component {
       previewClassName:  this.props.previewClassName,
       products:          this.props.products
     }
+
+    this.state.t = require(`json!yaml!./data/${this.state.locale}.yml`);
   }
 
   componentWillMount() {
