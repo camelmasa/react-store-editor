@@ -1,4 +1,11 @@
 /lib
 /node_modules
-/example/node_modules
+/example/*.png
+/example/*.eot
+/example/*.woff
+/example/*.woff2
+/example/*.svg
+/example/*.bundle.js
+/example/*.ttf
+/example/bundle.js
 *.swp
