@@ -1,12 +1,9 @@
 'use strict'
 
-import React from 'react'
+import React      from 'react'
+import DetailPage from '../DetailPage.js'
 
 export default class Panel extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
   static icon () {
     return <img src={require(`../images/panel.png`)} />
   }
@@ -72,12 +69,25 @@ export default class Panel extends React.Component {
     `
   }
 
+  constructor(props) {
+    super(props)
+
+    this.clickImage = this.clickImage.bind(this)
+  }
+
+
+  clickImage(e) {
+    let product = this.props.data.products[e.currentTarget.dataset.productId]
+
+     this.props.data.set({ layout: <DetailPage data={this.props.data} product={product} /> })
+  }
+
   render() {
-    let productLayouts = this.props.data.products.map((product) => {
+    let productLayouts = this.props.data.products.map((product, i) => {
       return (
         <div className="product">
           <div className="image">
-            <img src={product.image} />
+            <img src={product.image} onClick={this.clickImage} data-product-id={i} />
           </div>
           <div className="name">
             {product.name}
