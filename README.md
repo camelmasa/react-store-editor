@@ -5,6 +5,7 @@ React component for Store editor.
 ## Demo
 
 English  [demo](http://camelmasa.github.io/react-store-editor/example/en)
+
 Japanese [demo](http://camelmasa.github.io/react-store-editor/example/ja)
 
 ## Example
