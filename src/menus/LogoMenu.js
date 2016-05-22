@@ -15,7 +15,12 @@ export default class LogoMenu extends React.Component {
   }
 
   changeLogoFont(e) {
-    this.props.data.set({ logoFont: e.currentTarget.dataset.font })
+    // Need to refactor
+    let fontId = e.currentTarget.dataset.fontId
+    let fonts  = ["", "Amatic SC", "Bad Script"]
+
+    this.props.data.set({ logoFontId:   fontId })
+    this.props.data.set({ logoFont: fonts[fontId] })
   }
 
   changeLogoColor(e) {
@@ -33,12 +38,12 @@ export default class LogoMenu extends React.Component {
           <h3>Logo font</h3>
           <div>
             <div>
-              <a className="item" onClick={this.changeLogoFont} data-font="Amatic SC">
+              <a className="item" onClick={this.changeLogoFont} data-font-id="1">
                 <img src={require(`../images/amatic+sc.png`)} />
               </a>
             </div>
             <div>
-              <a className="item" onClick={this.changeLogoFont} data-font="Bad Script">
+              <a className="item" onClick={this.changeLogoFont} data-font-id="2">
                 <img src={require(`../images/bad+script.png`)} />
               </a>
            </div>

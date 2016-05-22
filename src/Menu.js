@@ -2,15 +2,11 @@
 
 import React          from 'react'
 import {Icon}         from 'react-fa'
-import zip            from 'jszip'
 import filesaver      from 'filesaverjs'
 import ReactTabs      from 'react-tabs'
 import LayoutMenu     from './menus/LayoutMenu.js'
 import LogoMenu       from './menus/LogoMenu.js'
 import BackgroundMenu from './menus/BackgroundMenu.js'
-
-window.JSZip     = zip
-window.filesaver = filesaver
 
 export default class Menu extends React.Component {
   constructor(props) {
@@ -21,31 +17,9 @@ export default class Menu extends React.Component {
   }
 
   clickDownload() {
-    let iframe       = document.querySelector(".preview").contentWindow.document
-    let content      = iframe.all[0].innerHTML
-    let designedPage = `<html>${content}</html>`
+    let d = this.props.data
 
-    let zip = new JSZip
-    zip.file("index.html", designedPage)
-
-    this.props.data.products.forEach((product, index) => {
-      let img    = iframe.querySelector(`img[src="${product.image}"]`);
-      let canvas = document.createElement('canvas')
-
-      canvas.width  = img.naturalWidth
-      canvas.height = img.naturalHeight
-
-      let ctx = canvas.getContext('2d')
-      ctx.drawImage(img, 0, 0)
-      let imageData = canvas.toDataURL().split(',')[1]
-
-      zip.file(product.image, imageData, { base64: true })
-    })
-
-    zip.generateAsync({type:"blob"})
-      .then((content) => {
-      filesaver.saveAs(content, "example.zip");
-    });
+    window.location = `${d.serverUrl}/download?store_assets[name]=${d.name}&store_assets[locale]=${d.locale}&store_assets[logo_font_id]=${d.logoFontId}&store_assets[layout_id]=${d.layoutId}&store_assets[background_url]=http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/${d.background}.png&store_assets[logo_size]=${d.logoSize}&store_assets[logo_color]=${d.logoColor}`
   }
 
   changeSelect(index) {

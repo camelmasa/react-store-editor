@@ -10,9 +10,12 @@ export default class LayoutMenu extends React.Component {
   }
 
   changeLayout(e) {
-    let layout = this.props.data.layouts[e.currentTarget.dataset.layoutId]
+    let layoutId = parseInt(e.currentTarget.dataset.layoutId)
+    let layout   = this.props.data.layouts[layoutId]
+
     this.props.data.set({ layout: React.createElement(layout, { data: this.props.data })})
     this.props.data.set({ layoutStyle: layout.style() })
+    this.props.data.set({ layoutId: layoutId + 1 }) // TODO: Need to refactor
   }
 
   render() {

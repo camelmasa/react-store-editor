@@ -7,6 +7,7 @@ import StoreEditor  from "../src/StoreEditor.js"
 ReactDOM.render(
   <StoreEditor
       name={"React store"}
+      serverUrl={"https://store-server-app.herokuapp.com/"}
       background={"tileable_wood_texture"}
       cssPrefix={"store-editor"}
       logoFont={"Amatic SC"}
