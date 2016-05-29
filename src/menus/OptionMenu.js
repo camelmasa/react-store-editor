@@ -8,6 +8,6 @@ export default class OptionMenu extends React.Component {
   }
 
   render() {
-    return (<div className="menu-content"></div>)
+    return <div className="menu-content"></div>
   }
 }

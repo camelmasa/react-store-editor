@@ -7,8 +7,6 @@ import Sidebar    from "react-sidebar"
 import Menu       from "./Menu.js"
 import MenuButton from "./MenuButton.js"
 import Preview    from "./Preview.js"
-import Standard   from "./layouts/Standard.js"
-import Panel      from "./layouts/Panel.js"
 
 export default class StoreEditor extends React.Component {
   constructor(props) {
@@ -18,33 +16,23 @@ export default class StoreEditor extends React.Component {
 
     this.state = {
       set:               this.set.bind(this),
-      locale:            this.props.locale || "en",
       name:              this.props.name,
-      layoutId:          this.props.layoutId || 1,
+      layouts:           this.props.layouts           || [],
+      locale:            this.props.locale            || "en",
+      layoutId:          this.props.layoutId          || 0,
       serverUrl:         this.props.serverUrl,
-      background:        this.props.background,
-      cssPrefix:         this.props.cssPrefix,
-      logoFont:          this.props.logoFont,
-      logoFontId:        this.props.logoFontId || 1,
-      logoSize:          this.props.logoSize,
-      logoColor:         this.props.logoColor,
-      menuSelectedIndex: this.props.menuSelectedIndex,
-      sidebarClassName:  this.props.sidebarClassName,
-      sidebarOpen:       this.props.sidebarOpen,
-      sidebarShadow:     this.props.sidebarShadow,
-      sidebarStyle:      this.props.sidebarStyle,
-      previewClassName:  this.props.previewClassName,
-      products:          this.props.products
+      backgroundUrl:     this.props.backgroundUrl,
+      logoFonts:         this.props.logoFonts,
+      logoFontId:        this.props.logoFontId        || 0,
+      logoSize:          this.props.logoSize          || 50,
+      logoColor:         this.props.logoColor         || "#000",
+      menuSelectedIndex: this.props.menuSelectedIndex || 0,
+      sidebarOpen:       this.props.sidebarOpen       || false,
+      sidebarShadow:     this.props.sidebarShadow     || true,
+      sidebarStyle:      this.props.sidebarStyle      || { sidebar: { overflowY: "hidden" }, overlay: { backgroundColor: "" } }
     }
 
     this.state.t = require(`json!yaml!./data/${this.state.locale}.yml`);
-  }
-
-  componentWillMount() {
-    // TODO: Implement custom layout API
-    this.state.layouts = [Panel, Standard]
-    this.state.layout = (<Panel data={this.state} />)
-    this.state.layoutStyle = Panel.style()
   }
 
   onSetSidebarOpen(open) {
@@ -57,13 +45,13 @@ export default class StoreEditor extends React.Component {
 
   render() {
     return (
-      <div className={this.state.cssPrefix} >
+      <div className={"store-editor"} >
         <Sidebar
           sidebar={<Menu data={this.state} />}
           open={this.state.sidebarOpen}
           onSetOpen={this.onSetSidebarOpen}
           shadow={this.state.sidebarShadow}
-          sidebarClassName={this.state.sidebarClassName}
+          sidebarClassName={"sidebar"}
           styles={this.state.sidebarStyle}>
           <MenuButton data={this.state} />
           <Preview data={this.state}/>
