@@ -1,34 +1,25 @@
 'use strict'
 
-import React        from "react"
-import ReactDOM     from "react-dom"
-import StoreEditor  from "../src/StoreEditor.js"
+import React       from "react"
+import ReactDOM    from "react-dom"
+import http        from "axios"
+import StoreEditor from "../src/StoreEditor.js"
 
-ReactDOM.render(
-  <StoreEditor
-      name={"React store"}
-      serverUrl={"https://store-server-app.herokuapp.com/"}
-      background={"tileable_wood_texture"}
-      cssPrefix={"store-editor"}
-      logoFont={"Amatic SC"}
-      logoSize={"50"}
-      logoColor={"#000"}
-      menuSelectedIndex={0}
-      sidebarClassName={"sidebar"}
-      sidebarOpen={false}
-      sidebarShadow={true}
-      sidebarStyle={ { sidebar: { overflowY: "hidden" }, overlay: { backgroundColor: "" } } }
-      previewClassName={"preview"}
-      products={ [
-        { image: "./images/men_t_shirts.jpg", name: "Men T Shirts", price: "$20.00"},
-        { image: "./images/ladies_t_shirts.jpg", name: "Ladies T Shirts", price: "$20.00"},
-        { image: "./images/button_badges.jpg", name: "Button badges", price: "$4.00"},
-        { image: "./images/mug.jpg", name: "Mug", price: "$19.00"},
-        { image: "./images/seals.jpg", name: "Seals", price: "$5.00"},
-        { image: "./images/tracker_hat.jpg", name: "Tracker hat", price: "$17.75"},
-        { image: "./images/post_cards.jpg", name: "Post cards", price: "$1.00"},
-        { image: "./images/iphone.jpg", name: "iPhone 6/6s, Tough", price: "$53.25"}
-      ]}
-  />,
-  document.getElementById('app')
-)
+http.get(`http://localhost:3000/api/meta`)
+.then(function (response) {
+  let meta = response.data
+
+  ReactDOM.render(
+    <StoreEditor
+      name={meta.name}
+      serverUrl={meta.url}
+      backgroundUrl={meta.background_url}
+      logoFonts={meta.logo_fonts}
+      layouts={meta.layouts}
+    />,
+    document.getElementById('app')
+  )
+})
+.catch(function (response) {
+  console.log(response);
+});

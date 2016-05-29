@@ -13,13 +13,15 @@ export default class Menu extends React.Component {
     super(props)
 
     this.clickDownload = this.clickDownload.bind(this)
-    this.changeSelect = this.changeSelect.bind(this)
+    this.changeSelect  = this.changeSelect.bind(this)
   }
 
   clickDownload() {
-    let d = this.props.data
+    let data     = this.props.data
+    let layout   = data.layouts[data.layoutId]
+    let logoFont = data.logoFonts[data.logoFontId]
 
-    window.location = `${d.serverUrl}/download?store_assets[name]=${d.name}&store_assets[locale]=${d.locale}&store_assets[logo_font_id]=${d.logoFontId}&store_assets[layout_id]=${d.layoutId}&store_assets[background_url]=http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/${d.background}.png&store_assets[logo_size]=${d.logoSize}&store_assets[logo_color]=${d.logoColor}`
+    window.location = `${data.serverUrl}/download?store[store_logo_font_attributes][logo_font_id]=${logoFont.id}&store[store_layout_attributes][layout_id]=${layout.id}&store[background_url]=${data.backgroundUrl}&store[logo_size]=${data.logoSize}&store[logo_color]=${data.logoColor}`
   }
 
   changeSelect(index) {

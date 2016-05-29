@@ -30,6 +30,7 @@
     "build": "./node_modules/babel-cli/bin/babel.js src --out-dir lib --source-maps inline; cp -rf ./src/images lib; cp -rf ./src/data lib; cp -rf ./src/css lib"
   },
   "devDependencies": {
+    "axios": "^0.11.1",
     "babel-cli": "^6.8.0",
     "babel-core": "^6.7.7",
     "babel-loader": "^6.2.4",
