@@ -17,11 +17,12 @@ export default class Menu extends React.Component {
   }
 
   clickDownload() {
-    let data     = this.props.data
-    let layout   = data.layouts[data.layoutId]
-    let logoFont = data.logoFonts[data.logoFontId]
+    let data       = this.props.data
+    let layout     = data.layouts[data.layoutId]
+    let logoFont   = data.logoFonts[data.logoFontId]
+    let background = data.backgrounds[data.backgroundId]
 
-    window.location = `${data.serverUrl}/download?store[store_logo_font_attributes][logo_font_id]=${logoFont.id}&store[store_layout_attributes][layout_id]=${layout.id}&store[background_url]=${data.backgroundUrl}&store[logo_size]=${data.logoSize}&store[logo_color]=${data.logoColor}`
+    window.location = `${data.serverUrl}/download?store[store_logo_font_attributes][logo_font_id]=${logoFont.id}&store[store_layout_attributes][layout_id]=${layout.id}&store[store_background_attributes][background_id]=${background.id}&store[logo_size]=${data.logoSize}&store[logo_color]=${data.logoColor}`
   }
 
   changeSelect(index) {
