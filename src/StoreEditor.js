@@ -18,7 +18,7 @@ export default class StoreEditor extends React.Component {
       set:               this.set.bind(this),
       name:              this.props.name,
       serverUrl:         this.props.serverUrl,
-      backgroundUrl:     this.props.backgroundUrl,
+      backgroundId:      this.props.backgroundId,
       backgrounds:       this.props.backgrounds       || [],
       layouts:           this.props.layouts           || [],
       logoFonts:         this.props.logoFonts         || [],

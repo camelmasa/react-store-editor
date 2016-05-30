@@ -13,6 +13,7 @@ http.get(`http://localhost:3000/api/meta`)
     <StoreEditor
       name={meta.name}
       serverUrl={meta.url}
+      backgroundId={meta.background_id}
       backgroundUrl={meta.background_url}
       logoFonts={meta.logo_fonts}
       layouts={meta.layouts}
