@@ -32,8 +32,6 @@ export default class StoreEditor extends React.Component {
       sidebarShadow:     this.props.sidebarShadow     || true,
       sidebarStyle:      this.props.sidebarStyle      || { sidebar: { overflowY: "hidden" }, overlay: { backgroundColor: "" } }
     }
-
-    this.state.t = require(`json!yaml!./data/${this.state.locale}.yml`);
   }
 
   onSetSidebarOpen(open) {

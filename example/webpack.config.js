@@ -7,14 +7,6 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.json/,
-        loader: "json"
-      },
-      {
-        test: /\.yml/,
-        loader: "yaml"
-      },
-      {
         test: /\.css$/,
         loader: "style!css"
       },
