@@ -16,6 +16,7 @@ http.get(`http://localhost:3000/api/meta`)
       backgroundUrl={meta.background_url}
       logoFonts={meta.logo_fonts}
       layouts={meta.layouts}
+      backgrounds={meta.backgrounds}
     />,
     document.getElementById('app')
   )

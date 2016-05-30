@@ -1,7 +1,6 @@
 'use strict'
 
 import React from 'react'
-import thumbnails from '../data/thumbnails.json'
 
 export default class BackgroundMenu extends React.Component {
   constructor(props) {
@@ -15,17 +14,14 @@ export default class BackgroundMenu extends React.Component {
   }
 
   render() {
-    // TODO: Move assets to server
-    let thumbs = thumbnails.map((thumbnail) => {
-      let url = `http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/${thumbnail}.png`
-
+    let thumbnails = this.props.data.backgrounds.map((background) => {
       return (
-        <span onClick={this.changeBackground} data-background-url={url}>
-          <img src={require(`../images/thumbnails/${thumbnail}.png`)} />
+        <span onClick={this.changeBackground} data-background-url={background.url}>
+          <img src={background.thumbnail_url} />
         </span>
       )
     })
 
-    return <div className="menu-content">{thumbs}/* Background pattern from subtlepatterns.com */</div>
+    return <div className="menu-content">{thumbnails}/* Background pattern from subtlepatterns.com */</div>
   }
 }
