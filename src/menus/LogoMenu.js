@@ -33,7 +33,7 @@ export default class LogoMenu extends React.Component {
       return (
         <div>
           <a className="item" onClick={this.changeLogoFont} data-font-id={index}>
-            <img src={logoFont.icon_path} />
+            <img src={logoFont.icon_url} />
           </a>
         </div>
       )
