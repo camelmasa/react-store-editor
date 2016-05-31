@@ -9,9 +9,9 @@ export default class Preview extends React.Component {
   }
 
   render() {
-    let logoFont   = this.props.data.logoFonts[this.props.data.logoFontId]
-    let layout     = this.props.data.layouts[this.props.data.layoutId]
-    let background = this.props.data.backgrounds[this.props.data.backgroundId]
+    const logoFont   = this.props.data.logoFonts[this.props.data.logoFontId]
+    const layout     = this.props.data.layouts[this.props.data.layoutId]
+    const background = this.props.data.backgrounds[this.props.data.backgroundId]
 
     // TODO: configure CSS using object
     return (

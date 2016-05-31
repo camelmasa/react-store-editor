@@ -7,7 +7,7 @@ import StoreEditor from "../src/StoreEditor.js"
 
 http.get(`http://localhost:3000/api/meta`)
 .then(function (response) {
-  let meta = response.data
+  const meta = response.data
 
   ReactDOM.render(
     <StoreEditor

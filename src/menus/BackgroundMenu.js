@@ -14,7 +14,7 @@ export default class BackgroundMenu extends React.Component {
   }
 
   render() {
-    let thumbnails = this.props.data.backgrounds.map((background, i) => {
+    const thumbnails = this.props.data.backgrounds.map((background, i) => {
       return (
         <span onClick={this.changeBackground} data-background-id={i}>
           <img src={background.thumbnail_url} />
