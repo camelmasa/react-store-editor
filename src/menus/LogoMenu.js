@@ -15,7 +15,7 @@ export default class LogoMenu extends React.Component {
   }
 
   changeLogoFont(e) {
-    let fontId = e.currentTarget.dataset.fontId
+    const fontId = e.currentTarget.dataset.fontId
 
     this.props.data.set({ logoFontId: fontId })
   }
@@ -29,7 +29,7 @@ export default class LogoMenu extends React.Component {
   }
 
   render() {
-    let logoFontTemplate = this.props.data.logoFonts.map((logoFont, index) => {
+    const logoFontTemplate = this.props.data.logoFonts.map((logoFont, index) => {
       return (
         <div>
           <a className="item" onClick={this.changeLogoFont} data-font-id={index}>

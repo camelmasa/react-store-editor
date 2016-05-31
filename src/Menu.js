@@ -17,10 +17,10 @@ export default class Menu extends React.Component {
   }
 
   clickDownload() {
-    let data       = this.props.data
-    let layout     = data.layouts[data.layoutId]
-    let logoFont   = data.logoFonts[data.logoFontId]
-    let background = data.backgrounds[data.backgroundId]
+    const data       = this.props.data
+    const layout     = data.layouts[data.layoutId]
+    const logoFont   = data.logoFonts[data.logoFontId]
+    const background = data.backgrounds[data.backgroundId]
 
     window.location = `${data.serverUrl}/download?store[store_logo_font_attributes][logo_font_id]=${logoFont.id}&store[store_layout_attributes][layout_id]=${layout.id}&store[store_background_attributes][background_id]=${background.id}&store[logo_size]=${data.logoSize}&store[logo_color]=${data.logoColor}`
   }
@@ -30,10 +30,10 @@ export default class Menu extends React.Component {
   }
 
   render() {
-    let Tab      = ReactTabs.Tab
-    let Tabs     = ReactTabs.Tabs
-    let TabList  = ReactTabs.TabList
-    let TabPanel = ReactTabs.TabPanel
+    const Tab      = ReactTabs.Tab
+    const Tabs     = ReactTabs.Tabs
+    const TabList  = ReactTabs.TabList
+    const TabPanel = ReactTabs.TabPanel
 
     return (
       <Tabs onSelect={this.changeSelect} selectedIndex={this.props.data.menuSelectedIndex} >
