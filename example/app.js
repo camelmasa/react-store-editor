@@ -5,7 +5,7 @@ import ReactDOM    from "react-dom"
 import http        from "axios"
 import StoreEditor from "../src/StoreEditor.js"
 
-http.get(`http://localhost:3000/api/meta`)
+http.get(`https://zipstore.herokuapp.com/api/meta`)
 .then(function (response) {
   const meta = response.data
 
