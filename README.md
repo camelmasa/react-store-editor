@@ -4,9 +4,7 @@ React component for Store editor.
 
 ## Demo
 
-English  [demo](http://camelmasa.github.io/react-store-editor/example/en)
-
-Japanese [demo](http://camelmasa.github.io/react-store-editor/example/ja)
+[demo](http://camelmasa.github.io/react-store-editor/example)
 
 ## Example
 
@@ -15,35 +13,30 @@ Japanese [demo](http://camelmasa.github.io/react-store-editor/example/ja)
 
 import React       from "react"
 import ReactDOM    from "react-dom"
-import StoreEditor from "react-store-editor"
+import http        from "axios"
+import StoreEditor from "../src/StoreEditor.js"
 
-ReactDOM.render(
-  <StoreEditor
-    name={"React store"}
-    background={"tileable_wood_texture"}
-    cssPrefix={"store-editor"}
-    logoFont={"Amatic SC"}
-    logoSize={"50"}
-    logoColor={"#000"}
-    menuSelectedIndex={0}
-    sidebarClassName={"sidebar"}
-    sidebarOpen={false}
-    sidebarShadow={true}
-    sidebarStyle={ { sidebar: { overflowY: "hidden" }, overlay: { backgroundColor: "" } } }
-    previewClassName={"preview"}
-    products={[
-      { image: "/images/men_t_shirts.jpg", name: "Men T Shirts", price: "$20.00" },
-      { image: "/images/ladies_t_shirts.jpg", name: "Ladies T Shirts", price: "$20.00" },
-      { image: "/images/button_badges.jpg", name: "Button badges", price: "$4.00" },
-      { image: "/images/mug.jpg", name: "Mug", price: "$19.00" },
-      { image: "/images/seals.jpg", name: "Seals", price: "$5.00" },
-      { image: "/images/tracker_hat.jpg", name: "Tracker hat", price: "$17.75" },
-      { image: "/images/post_cards.jpg", name: "Post cards", price: "$1.00" },
-      { image: "/images/iphone.jpg", name: "iPhone 6/6s, Tough", price: "$53.25" }
-    ]}
-  />,
-  document.getElementById('app')
-)
+http.get(`https://zipstore.herokuapp.com/api/meta`)
+.then(function (response) {
+  const meta = response.data
+
+  ReactDOM.render(
+    <StoreEditor
+      name={meta.name}
+      serverUrl={meta.url}
+      backgroundId={meta.background_id}
+      backgroundUrl={meta.background_url}
+      logoFonts={meta.logo_fonts}
+      layouts={meta.layouts}
+      backgrounds={meta.backgrounds}
+    />,
+    document.getElementById('app')
+  )
+})
+.catch(function (response) {
+  console.log(response);
+});
+
 ```
 
 ## License
